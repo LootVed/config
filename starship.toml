@@ -1,0 +1,46 @@
+format = """
+[┌──$git_branch──$username─$hostname─>](bold green) $time $directory
+[└──$cmd_duration──$character](bold green) """
+
+scan_timeout = 10
+add_newline = true
+
+
+[character]
+success_symbol = "[❯](bold grey)"
+error_symbol = "[✖](bold red)"
+
+
+[cmd_duration]
+min_time = 2_000
+format = "[$duration](bold yellow)"
+disabled = false
+
+[hostname]
+ssh_only = true
+format = "[$hostname](bold red) "
+disabled = false
+
+[username]
+style_user = "white bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[time]
+disabled = false
+format = '[$time](bold red)'
+time_format = "%R"
+utc_time_offset = "+1"
+
+[git_branch]
+format = "[$symbol$branch]($style)"
+style = "bold yellow"
+
+[directory]
+truncation_length = 7
+style = "bold yellow"	
+
+
+#starship#
