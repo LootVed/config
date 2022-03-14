@@ -44,3 +44,4 @@ style = "bold yellow"
 
 
 #starship#
+# ln -sf ${INIT_ROOT_DIR?}/opt/starship.toml ${STARSHIP_CONFIG?}
